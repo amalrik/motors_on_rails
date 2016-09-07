@@ -14,7 +14,7 @@ class Webmotors::UpdateMakers
     Make.transaction do
       json.each do |make_params|
         human_name = make_params["Nome"].humanize
-        continue if human_name == ""
+        next if human_name == ""
         Make.where(name: human_name).update_or_create(name: human_name, webmotors_id: make_params["Id"])
       end
     end
