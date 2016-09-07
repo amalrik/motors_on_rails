@@ -19,9 +19,12 @@ ActiveRecord::Schema.define(version: 20160226182941) do
   create_table "makes", force: :cascade do |t|
     t.string   "name"
     t.integer  "webmotors_id"
+    t.integer  "maker_count"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  add_index "makes", ["webmotors_id"], name: "index_makes_on_webmotors_id", using: :btree
 
   create_table "models", force: :cascade do |t|
     t.integer  "make_id"
@@ -29,5 +32,7 @@ ActiveRecord::Schema.define(version: 20160226182941) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "models", ["make_id"], name: "index_models_on_make_id", using: :btree
 
 end
