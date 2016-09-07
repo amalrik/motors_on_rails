@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @makers = Make.where.not(name: '').order('name')
+    @makers = Make.all.order('name')
   end
 end

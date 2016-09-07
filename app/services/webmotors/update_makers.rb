@@ -2,7 +2,7 @@ class Webmotors::UpdateMakers
   attr_reader :uri
 
   def initialize
-    @uri = URI("http://www.webmotors.com.br/carro/marcas")
+    @uri = URI(ENV['MAKERS_URI'])
   end
 
   def call

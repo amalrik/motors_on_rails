@@ -5,7 +5,6 @@ class ModelsController < ApplicationController
 
   private
   def model_params
-    #byebug
     params.require(:make).permit(:id)
   end
 end

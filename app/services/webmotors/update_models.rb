@@ -2,9 +2,8 @@ class Webmotors::UpdateModels
   attr_reader :uri, :webmotors_id
 
   def initialize(ids)
-    @uri = URI("http://www.webmotors.com.br/carro/modelos")
+    @uri = URI(ENV['MODELS_URI'])
     @webmotors_ids = ids.map(&:to_i)
-    #byebug
   end
 
   def call
