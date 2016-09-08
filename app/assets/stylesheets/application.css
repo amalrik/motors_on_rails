@@ -10,6 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap
  *= require_tree .
- *= require_self
- */
+ *= require_self       
+*/
+body {
+  background: #FFEEEE; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #FFEEEE , #DDEFBB); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #FFEEEE , #DDEFBB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+} 

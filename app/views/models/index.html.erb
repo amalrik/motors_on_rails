@@ -1,7 +1,12 @@
-<%= link_to("Voltar", root_path) %>
-
-<ul>
-  <% @models.each do |model| %>
-    <li><%= model.name %></li>
-  <% end %>
-</ul>
+<div class="row extra-botton-padding">
+  <%= link_to("Voltar", root_path, class: "btn btn-primary") %>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-4">
+    <ul class="table table-striped">
+      <% @models.each do |model| %>
+        <li><%= model.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

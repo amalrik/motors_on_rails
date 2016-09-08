@@ -6,7 +6,7 @@ namespace :webmotors do
 
   desc "Atualiza a tabela de modelos"
   task :update_models, [:ids] => :environment do |t,args|
-    args.with_defaults(ids: Make.pluck(:webmotors_id))
+    args.with_defaults(ids: Make.pluck(:id))
     Webmotors::UpdateModels.new(args.ids).call()
   end
 

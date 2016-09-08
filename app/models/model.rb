@@ -1,4 +1,4 @@
 class Model < ActiveRecord::Base
-  belongs_to :make, counter_cache: :maker_count
+  belongs_to :make
   include Upsertable
 end
