@@ -18,5 +18,6 @@ class Webmotors::UpdateMakers
         Make.where(name: human_name).update_or_create(name: human_name, webmotors_id: make_params["Id"])
       end
     end
+    Make.count
   end
 end

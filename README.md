@@ -1,15 +1,13 @@
 # Teste Ruby para Candidatos
 
-## Resumo
+## Setup
 
-O objetivo da aplicação é consultar marcas e modelos de carros usando a API do WebMotors.
+1. Clone do repo
+2. bundle install
+3. crie o database.yml(deixei um sample basta renomear).
+4. bundle exec rake db:create db:migrate db:seed
+5. bundle exec rake webmotors:update_makers webmotors:update_models
+6. rails s
 
-## Objetivo
-
-1. Faça um fork do projeto;
-2. Execute o rails server;
-3. Verifique o funcionamento da aplicação;
-4. Abra o código e faça uma análise para uma melhor compreensão;
-5. Utilize seu conhecimento em Ruby/Rails e Orientação a Objetos para fazer todas as possíveis mudanças que julgar pertinente: classes, métodos, variáveis e boas práticas.
-
-Obs: todo o cuidado e rigor adicional serão contados como pontos positivos.
+##live demo
+[on heroku](https://young-shore-49778.herokuapp.com)

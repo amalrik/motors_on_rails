@@ -21,5 +21,6 @@ class Webmotors::UpdateModels
         end
       end
     end
+    Model.count
   end
 end
